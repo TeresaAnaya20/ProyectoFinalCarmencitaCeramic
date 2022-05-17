@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->boolean('tipo')->default(1); // 1 cliente, 0 = admin
             $table->rememberToken();
             $table->timestamps();
         });

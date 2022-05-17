@@ -14,11 +14,25 @@
 
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
+<body class="container-xl">
+    <div class="cabecera flex items-center">
+        @if (Route::has('login'))
+            <div class="top-0 right-0 px-6 py-4 sm:block">
+                @auth
+                    <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-700 dark:text-gray-500">Perfil</a>
+                @else
+                    <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500">Iniciar Sesion</a>
 
-        {{-- <img src="../resources/img/logo.jpeg" height="70" alt="" loading="lazy"> --}}
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    @if (Route::has('register'))
+                        <a href="{{ route('register') }}"
+                            class="ml-4 text-sm text-gray-700 dark:text-gray-500">Registrarse</a>
+                    @endif
+                @endauth
+            </div>
+        @endif
+    </div>
+    {{-- <nav class="navbar navbar-expand-lg fixed-top navbar-scroll w-100">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark w-100">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="../resources/img/logo.jpeg" height="70" alt="" loading="lazy">
@@ -37,7 +51,7 @@
                     </div>
                 </div>
             </div>
-        </nav>
+        </nav> --}}
 </body>
 
 </html>
