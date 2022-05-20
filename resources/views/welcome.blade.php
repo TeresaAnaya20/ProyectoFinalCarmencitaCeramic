@@ -15,7 +15,7 @@
 </head>
 
 <body class="container-xl">
-    <div class="cabecera flex items-center">
+    {{-- <div class="cabecera flex items-center">
         @if (Route::has('login'))
             <div class="top-0 right-0 px-6 py-4 sm:block">
                 @auth
@@ -30,8 +30,8 @@
                 @endauth
             </div>
         @endif
-    </div>
-    {{-- <nav class="navbar navbar-expand-lg fixed-top navbar-scroll w-100">
+    </div> --}}
+    <nav class="navbar navbar-expand-lg fixed-top navbar-scroll w-100">
         <nav class="navbar navbar-expand-lg navbar-light bg-dark w-100">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
@@ -51,7 +51,7 @@
                     </div>
                 </div>
             </div>
-        </nav> --}}
+        </nav>
 </body>
 
 </html>
